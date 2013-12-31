@@ -7,7 +7,7 @@ const readData = () => {
     return new Promise((resolve, reject) => {
         fs.readFile(jsonPath, (err, data) => {
             if (err) {
-                reject(err);
+                return reject(err);
             }
             else {
                 resolve(JSON.parse(data.toString()));
@@ -19,12 +19,12 @@ const readData = () => {
 
 const writeData = (data) => {
     return new Promise((resolve, reject) => {
-        fs.writeFile(jsonPath, data, (data) => {
+        fs.writeFile(jsonPath, JSON.stringify(data), (err) => {
             if (err) {
                 reject(err);
             }
             else {
-                resolve(JSON.stringify(data));
+                resolve();
             }
         });
     });
@@ -33,16 +33,26 @@ const writeData = (data) => {
 exports.createUser = async (userId, username, email, password) => {
     try {
         const users = await readData();
-        const matched = users.find(userId === userId);
+        const matched = users.find(user => user.email === email);
         if (matched) {
             throw new Error("User already Exists!");
         }
         else {
-            await writeData([...data, { userId, username, email, password }]);
+            await writeData([...users, { userId, username, email, password }]);
             return ("User Successfully Created");
         }
     } catch (error) {
         throw error;
     }
 
+};
+
+exports.findUser = async (email) => {
+    try {
+        const users = await readData();
+        const matched = users.find(user => user.email === email);
+        return matched;
+    } catch (error) {
+        throw error;
+    }
 };
