@@ -18,11 +18,12 @@ exports.login = async (email, password) => {
         const user = await findUser(email);
         const verify = await bcrypt.compare(password, !!user && user.password)
         if(verify){
-            const token = jwt.sign({email}, SECRET_KEY, { expiresIn: '1h' });
-            return {token};
+            const token = jwt.sign({email}, "shhhh");
+            console.log('verified 2')
+            return {user, token};
         }
         else{
-            return("Invalid email or password!");
+            throw new Error("Invalid email or password!");
         }
     } catch (error) {
         throw error;

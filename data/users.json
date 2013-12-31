@@ -1,1 +1,26 @@
-[{"userId":1705070028489,"username":"Basim Khan","email":"basimkhan@gmail.com","password":"$2b$12$CuAx88XcmbMsuwLTMjtaze.p3lYz18nxeESNywOFg6IFA97YOmpEK"},{"userId":1705090801354,"username":"Hamza Pervez","email":"hamza@gmail.com","password":"$2b$12$rUZ6cDT/.nRiQ.72i3538ecMnsm8XcnnVyLJ7eWnWUPFhwIBkg9S2"}]
+[
+  {
+    "userId": 1705070028489,
+    "username": "Basim Khan",
+    "email": "basimkhan@gmail.com",
+    "password": "$2b$12$CuAx88XcmbMsuwLTMjtaze.p3lYz18nxeESNywOFg6IFA97YOmpEK"
+  },
+  {
+    "userId": 1705090801354,
+    "username": "Hamza Pervez",
+    "email": "hamza@gmail.com",
+    "password": "$2b$12$rUZ6cDT/.nRiQ.72i3538ecMnsm8XcnnVyLJ7eWnWUPFhwIBkg9S2"
+  },
+  {
+    "userId": 1705606487639,
+    "username": "Abdul Rehman",
+    "email": "abdul@mail.com",
+    "password": "$2b$12$bn0Hekpy70C6znGPxmYSeeNFp4j4WEqA.v1K398A5XyrKe9Wul3n2"
+  },
+  {
+    "userId": 1705884198272,
+    "username": "test",
+    "email": "test@gmail.com",
+    "password": "$2b$12$KypCni5RLD4DnqHAFERMu.r2i8rprBUumgBR/FXVYIkA/lSw/sdlK"
+  }
+]
